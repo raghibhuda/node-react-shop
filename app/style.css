@@ -67,11 +67,11 @@ button.button {
   background: #EFDB06;
   border: 1px solid #F9E610;
   border-radius: 20px;
-  padding: 10px 15px;
+  padding: 15px 25px;
   font-family: 'PT Sans', sans-serif;
   font-weight: bold;
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 16px;
   transition: all 200ms ease-out;
   outline: none;
 }

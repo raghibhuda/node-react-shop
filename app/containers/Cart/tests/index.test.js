@@ -1,6 +1,6 @@
 /**
  *
- * Tests for SignIn
+ * Tests for Cart
  *
  * @see https://github.com/react-boilerplate/react-boilerplate/tree/master/docs/testing
  *
@@ -11,15 +11,16 @@ import { render } from 'react-testing-library';
 import { IntlProvider } from 'react-intl';
 // import 'jest-dom/extend-expect'; // add some helpful assertions
 
-import SignIn from '../index';
+import { Cart } from '../index';
 import { DEFAULT_LOCALE } from '../../../i18n';
 
-describe('<SignIn />', () => {
+describe('<Cart />', () => {
   it('Expect to not log errors in console', () => {
     const spy = jest.spyOn(global.console, 'error');
+    const dispatch = jest.fn();
     render(
       <IntlProvider locale={DEFAULT_LOCALE}>
-        <SignIn />
+        <Cart dispatch={dispatch} />
       </IntlProvider>,
     );
     expect(spy).not.toHaveBeenCalled();
@@ -39,7 +40,7 @@ describe('<SignIn />', () => {
       container: { firstChild },
     } = render(
       <IntlProvider locale={DEFAULT_LOCALE}>
-        <SignIn />
+        <Cart />
       </IntlProvider>,
     );
     expect(firstChild).toMatchSnapshot();
