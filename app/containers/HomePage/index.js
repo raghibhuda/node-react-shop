@@ -8,6 +8,8 @@
 
 import React from 'react';
 import Navbar from '../../components/Navbar';
+import  Product  from '../Product';
+
 
 // import { Link } from 'react-router-dom';
 
@@ -17,6 +19,7 @@ export default function HomePage() {
   return (
     <div>
       <Navbar/>
+      <Product/>
     </div >
   );
 }
